@@ -1,0 +1,12 @@
+<p>pdf works!</p>
+<H1><P style="text-align:center">Projet Insertion des Images</P></H1>
+Voilà l'image : 
+<br>
+<input type="file" name="image" (change)="onFileChanged($event)">
+  
+<div class="info" *ngIf="filePreview">      
+    <P style="text-align:center">    
+    <img [src]="sanitize(filePreview)" width="150" height="150"/>
+    </P>
+
+</div>
