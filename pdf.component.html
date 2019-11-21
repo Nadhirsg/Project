@@ -1,12 +1,44 @@
-<p>pdf works!</p>
-<H1><P style="text-align:center">Projet Insertion des Images</P></H1>
-Voilà l'image : 
-<br>
-<input type="file" name="image" (change)="onFileChanged($event)">
-  
-<div class="info" *ngIf="filePreview">      
-    <P style="text-align:center">    
-    <img [src]="sanitize(filePreview)" width="150" height="150"/>
-    </P>
+<html>
+<head>
 
-</div>
+</head>
+    <body bgcolor="#000000">
+
+     
+
+    <style type="text/css">
+        p {
+            
+            width:200px;
+            padding:100px;
+            margin:1px ;
+            }
+    </style>
+
+
+
+    <div align="center"><p><font color=white size="20">works!</font></p> </div> 
+    <div align="center"><p><font color=white size="6">Projet Insertion des Images</font></p></div>
+    
+    <script type="text/javascript" src="scripts/jspdf.js"></script>
+    
+    Voilà l'image :
+    
+    <br>
+    <input type="file" name="image" (change)="onFileChanged($event)">
+      
+    <div class="info" *ngIf="filePreview">      
+        <P style="text-align:center">    
+        <img [src]="sanitize(filePreview)" width="200" height="200"/>
+        </P>
+    </div>
+      <!-- It can parse html: -->
+     <!-- <table id="my-table">...</table> -->
+       
+    </body>
+        </html>
+    
+   
+
+
+    
